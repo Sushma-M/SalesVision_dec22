@@ -117,9 +117,8 @@ public class DepartmentController {
         return departmentService.count(query);
     }
 
-    @RequestMapping(value = "/{id}/employees", method = RequestMethod.GET)
+    @RequestMapping(value = "/{id:.+}/employees", method = RequestMethod.GET)
     @ApiOperation(value = "Gets the employees instance associated with the given id.")
-    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     public Page<Employee> findAssociatedEmployees(@PathVariable("id") Integer id, Pageable pageable) {
         LOGGER.debug("Fetching all associated employees");
         return departmentService.findAssociatedEmployees(id, pageable);

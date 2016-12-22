@@ -239,7 +239,7 @@
     "designMaxResults" : 10,
     "inFlightBehavior" : "executeLast",
     "startUpdate" : true,
-    "autoUpdate" : true,
+    "autoUpdate" : false,
     "transformationRequired" : false,
     "liveSource" : "hrdb",
     "ignoreCase" : true,
@@ -377,7 +377,6 @@
     "tableType" : "TABLE",
     "properties" : [ ],
     "relatedTables" : [ ],
-    "filterFields" : { },
     "package" : "com.hrdb.Department"
   },
   "HrdbEmployeeData" : {

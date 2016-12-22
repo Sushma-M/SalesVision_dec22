@@ -35,12 +35,12 @@ public class RepsServiceImpl implements RepsService {
     private static final Logger LOGGER = LoggerFactory.getLogger(RepsServiceImpl.class);
 
     @Autowired
-	@Qualifier("salesdb.TasksService")
-	private TasksService tasksService;
-
-    @Autowired
 	@Qualifier("salesdb.QuotesService")
 	private QuotesService quotesService;
+
+    @Autowired
+	@Qualifier("salesdb.TasksService")
+	private TasksService tasksService;
 
     @Autowired
     @Qualifier("salesdb.RepsDao")
@@ -169,19 +169,19 @@ public class RepsServiceImpl implements RepsService {
     /**
 	 * This setter method should only be used by unit tests
 	 *
-	 * @param service TasksService instance
+	 * @param service QuotesService instance
 	 */
-	protected void setTasksService(TasksService service) {
-        this.tasksService = service;
+	protected void setQuotesService(QuotesService service) {
+        this.quotesService = service;
     }
 
     /**
 	 * This setter method should only be used by unit tests
 	 *
-	 * @param service QuotesService instance
+	 * @param service TasksService instance
 	 */
-	protected void setQuotesService(QuotesService service) {
-        this.quotesService = service;
+	protected void setTasksService(TasksService service) {
+        this.tasksService = service;
     }
 
 }

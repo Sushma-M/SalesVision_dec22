@@ -56,9 +56,6 @@
                 <prop key="hibernate.dialect">
                 ${hrdb.dialect}
                 </prop>
-                <prop key="hibernate.default_schema">
-                ${hrdb.schemaName}
-                </prop>
                 <prop key="hibernate.show_sql">
                     false
                 </prop>
